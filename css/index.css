@@ -192,36 +192,36 @@ section {
 @media screen and (max-width: 768px) {
     .main-hero {
         height: calc(50vh - 5rem);
-        background-size: 80vh, cover;
-        column-gap: 2rem;
-        padding: 0 2rem;
+        background-size: 40vh, cover;
+        background-position: bottom center;
+        column-gap: 1rem;
+        padding: 0 1rem;
     }
 
     .main-hero-intro a {
-        margin-top: 1.5rem;
+        margin-top: .75rem;
     }
 
     .main-hero-quotes {
-        margin-left: 2rem;
+        margin-left: 1rem;
     }
 
     .index-container {
-        padding: 1rem;
+        padding: .5rem;
     }
 
     .index-category-box {
-        height: 10rem;
-        width: 10rem;
+        height: 15rem;
+        width: 15rem;
     }
 
     .index-category-box h3 {
-        font-size: 1rem;
+        font-size: 1.15rem;
     }
 
     .index-about {
         flex-direction: column;
-        margin: 2rem;
-        column-gap: 0;
+        margin: 1rem;
     }
 
     .index-about-img {
