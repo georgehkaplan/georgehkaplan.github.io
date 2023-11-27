@@ -53,14 +53,20 @@
 }
 
 @media only screen and (max-width: 760px) {
-    .left-content {
-        display: flex;
+    main{
+        display: grid;
+        grid-template-columns: 1fr;
+        place-items: center;
         float:none;
-        justify-content: center;
         width: 100%;
+    }
+    .left-content {
+        float:none;
+        
     }
     .main-contact ul li{
         flex-wrap: nowrap;
+        
         margin: 0;
         padding: 0;
     }
@@ -68,5 +74,10 @@
         color:black;
         max-width: 1rem;
         max-height: 1rem;
+    }
+    .right-content{
+        width: 100%;
+        border-left: none;
+        padding:1rem;
     }
 }
