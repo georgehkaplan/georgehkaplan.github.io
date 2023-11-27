@@ -1,118 +1,98 @@
-section {
-    padding: 2rem 5rem;
-}
-
-.main-hero {
-    height: calc(70vh - 5rem);
-    background-image: url(../Images/portrait.png), url(../Images/bg.png);
-    background-size: 60vh, cover;
-    background-position: bottom center;
-    background-repeat: no-repeat;
+.main-title {
+    max-height: 80vh;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    z-index: 100;
-    column-gap: 5rem;
-    padding: 0 5rem;
-}
-
-.main-hero-intro a {
-    width: fit-content;
-    display: block;
     text-align: center;
-    margin-top: 2.0rem;
-    padding: .5rem 1rem;
-    background-color: var(--site-color1);
 }
 
-.main-hero-quotes {
-    border-left: .25rem solid var(--site-color1);
-    padding-left: 1rem;
-    margin-left: 5rem;
-}
-
-.index-category {
-    color: black;
-    background-color: white;
-}
-
-.index-container {
+.main-hero-intro {
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    flex-wrap: wrap;
-    padding: 2rem;
+    align-items: center;
+    animation: slideInFromBottom 1s ease;
 }
-
-.index-category-box {
-    height: 15rem;
-    width: 15rem;
-    margin: 1rem;
+.main-hero-img {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #111 center/cover;
-    position: relative;
+    flex-direction: column;
+    animation: slideInFromBottom 1s ease;
+}
+.main-hero-img img {
+    max-height: 58vh;
+    margin-top: 10vh;
+    object-position:bottom;
+    animation: fadeIn 2s ease-in-out;
+}
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    80% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
-.index-category-box h3 {
-    line-height: var(--line-height);
-    text-shadow: 0 .10rem .10rem #000;
-    text-transform: uppercase;
-    z-index: 100;
+@keyframes slideInFromBottom {
+    0% {
+        transform: translateY(120%);
+        opacity: 0;
+    }
+    80% {
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
-
-.index-category-box:hover {
-    background-color: rgba(0, 0, 0, .4);
-    background-blend-mode: darken;
-}
-
-.index-category-box:nth-child(1) {
-    background: rgba(0, 0, 0, .4) url(../Images/about.jpg) center/cover;
-}
-
-.index-category-box:nth-child(2) {
-    background: rgba(0, 0, 0, .4) url(../Images/summer-internship.jpeg) center/cover;
-}
-
-.index-category-box:nth-child(3) {
-    background: rgba(0, 0, 0, .4) url(../Images/sdsu-campus.jpeg) center/cover;
-}
-
-.index-category-box:nth-child(4) {
-    background: rgba(0, 0, 0, .4) url(../Images/George-Kaplan-Resume.png) center/cover;
-}
-
-.category-overlay {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background-color: rgba(0, 0, 0, .4);
-}
-
-/* About block */
-.index-about {
+.main-icons {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 5rem;
-    column-gap: 2rem;
+    flex-direction: row;
 }
 
-.index-about-img {
-    width: 30%;
+.main-icons a img {
+    display: inline;
+    max-width: 4rem;
+    height: 4rem;
+    object-fit: cover;
+    margin: .5rem;
+    background-color: transparent;
+    filter: grayscale(100%) saturate(0%);
+}
+.main-icons a img:hover {
+    filter: grayscale(0%) saturate(100%);
+}
+/*About block*/
+.index-about{
+    background-color: var(--background1);
+}
+.about-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin:1rem 5rem;
+    place-content: center;
+    justify-content: center;
+    column-gap: 1rem;
+
 }
 
-.index-about-img img {
-    width: 90%;
-    vertical-align: middle;
+.about-skills-container {
+    justify-content: center;
+    align-items: center;
+    text-align: start;
+    padding: 1rem
 }
-
-.index-about-text {
-    width: 35%;
+.index-about-text{
+    padding:1rem;
 }
-
 .index-about-text a {
     display: block;
     background-color: var(--site-color1);
@@ -122,43 +102,31 @@ section {
     margin-top: 1rem;
 }
 
-.index-about-skill {
-    width: 35%;
-    display: grid;
+.past-companies {
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5rem;
 }
 
-.index-about-skill-bar {
-    height: .75rem;
-    border: .05rem solid white;
+.past-companies-img ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
 }
 
-.index-about-skill-bar-fill {
-    height: 100%;
-    background-color: var(--site-color1);
+.past-companies-img ul li img {
+    max-width: 10rem;
+    height: 5rem;
+    object-fit: scale-down;
+    object-position: center;
+    background-color: var(--background-color);
 }
 
-.excel {
-    width: 90%;
-}
-
-.alteryx {
-    width: 65%;
-}
-
-.sql {
-    width: 72%;
-}
-
-.tableau {
-    width: 88%;
-}
-
-.power-bi {
-    width: 55%;
-}
-
-.html-css {
-    width: 45%;
+.past-companies-img ul li {
+    margin: .25rem;
+    padding: .5rem;
 }
 
 .past-companies {
@@ -175,7 +143,7 @@ section {
 }
 
 .past-companies-img ul li img {
-    width: 10rem;
+    max-width: 10rem;
     height: 5rem;
     object-fit: scale-down;
     object-position: center;
@@ -184,56 +152,49 @@ section {
 .past-companies-img ul li {
     margin: .25rem;
     padding: .5rem;
-    background-color: white;
-    border: .25rem solid var(--site-color1);
+    background-color: var(--background-color);
 }
 
-/* Media Queries */
-@media screen and (max-width: 768px) {
-    .main-hero {
-        height: calc(50vh - 5rem);
-        background-size: 40vh, cover;
-        background-position: bottom center;
-        column-gap: 1rem;
-        padding: 0 1rem;
-    }
-
-    .main-hero-intro a {
-        margin-top: .75rem;
-    }
-
-    .main-hero-quotes {
-        margin-left: 1rem;
-    }
-
-    .index-container {
-        padding: .5rem;
-    }
-
-    .index-category-box {
-        height: 15rem;
-        width: 15rem;
-    }
-
-    .index-category-box h3 {
-        font-size: 1.15rem;
-    }
-
-    .index-about {
+/* Tablet Friendly Media Query */
+@media only screen and (max-width: 768px) {
+    .main-title {
         flex-direction: column;
-        margin: 1rem;
     }
 
-    .index-about-img {
-        width: 100%;
+    .main-icons, .main-hero-intro p{
+        display: none;
+    }
+    .main-icon a img {
+        width: 1rem;
+        height: 1rem;
+    }
+    .main-hero-img img {
+        margin-top: 0;
+        z-index: -1;
     }
 
-    .index-about-text {
-        width: 100%;
+    .main-hero-intro .main-icons a img {
+        margin-bottom: 1rem;
     }
-
-    .index-about-skill {
-        width: 100%;
+    .green-button{
+        padding: .25rem .5rem;
+    }
+    .index-about-text a{
+        padding: .25rem .5rem;
+    }
+    .index-about-text{
+        max-width: 100%;
+    }
+    .about-skills-container{
+        display: grid;
+        grid-template-columns: 1fr 4fr;
+        justify-content: center;
+        
+    }
+    .about-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     }
 
     .past-companies-img ul li img {
