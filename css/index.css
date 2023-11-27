@@ -147,6 +147,8 @@
     height: 5rem;
     object-fit: scale-down;
     object-position: center;
+    background-color: rgba(255, 255, 255, 0.5);
+    background-blend-mode: luminosity;
 }
 
 .past-companies-img ul li {

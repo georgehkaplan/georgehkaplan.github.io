@@ -20,18 +20,17 @@
     flex-wrap: nowrap;
     width: 100%;
     padding: .5rem;
-    
 }
 .main-contact ul li img{
-    color:black;
     max-width: 2rem;
     max-height: 2rem;
     vertical-align: middle;
     margin: .5rem;
     left:0;
+    fill-opacity: var(--text-color);
 }
 .main-contact ul li a{
-    color:black;
+    color:var(--text-color);
     text-decoration: none;
     margin: .5rem;
     left:0;

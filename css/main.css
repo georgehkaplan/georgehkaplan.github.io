@@ -1,7 +1,9 @@
+/* Colors */
 :root {
     --background-color: #fff;
-    --background1: lightgray;
+    --background1: #dee4e7;
     --background2:darkgray;
+    --background3: #434344;
     --site-color1: #00B897;
     --site-color2: rgb(10, 133, 108);
     --site-color3: rgb(134, 156, 153);
@@ -10,15 +12,13 @@
 
 .dark-theme {
     --background-color: #212121;
-    --background1:#2a2a2a;
+    --background1:#37474f;
     --background2:#676767;
     --site-color1: #00B897;
     --site-color2: #44cbb2;
     --site-color3: #9cd8cd;
     --text-color: white;
 }
-
-
 * {
     margin: 0;
     padding: 0;
@@ -77,8 +77,8 @@ header {
     display: flex;
     justify-content: space-around;
     align-content: center;
-    background-color: var(--background2);
-    color:var(--text-color);
+    background-color: var(--background3);
+    color:white;
 }
 
 .header-logo {
@@ -110,13 +110,13 @@ header {
     line-height: 8vh;
     text-decoration: none;
     transition: all 0.3s ease-in-out;
-    color:var(--text-color);
+    color:white;
     border-radius: 1rem;
 }
 
 .header-nav ul li a:hover {
-    color:var(--background1);
-    text-shadow: 0 .1rem .5rem var(--text-color);
+    color:var(--background2);
+    text-shadow: 0 .1rem .5rem black;
 }
 
 
@@ -261,7 +261,7 @@ footer {
 }
 @media only screen and (max-width: 768px) {
     body{
-        font-size: 12px;
+        font-size: 14px;
     }
     h1{font-size:2rem;}
     h2{font-size:1.5rem;}

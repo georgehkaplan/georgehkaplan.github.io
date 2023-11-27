@@ -9,6 +9,8 @@ icon.onclick = function() {
   }
 }
 
+
+
 function gfgMenu() { 
   const GFG = document.querySelector('.links'); 
 
