@@ -78,7 +78,7 @@ p{
 @media only screen and (max-width: 760px) {
     .leftColumn, .rightColumn, .card1, .card {
         width:100%;
-        margin: 1rem;
+        margin: 1rem 0;
         padding:1rem;
         display:flex;
     }

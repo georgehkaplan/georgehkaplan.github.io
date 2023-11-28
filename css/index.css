@@ -15,7 +15,10 @@ text{
     }
     
 }
-
+h1{
+    margin:0;
+    padding:0;
+}
 .main-title {
     max-height: 80vh;
     display: flex;
@@ -39,7 +42,7 @@ text{
     animation: slideInFromBottom 1s ease;
 }
 .main-hero-img img {
-    max-height: 58vh;
+    height: 50vh;
     margin-top: 10vh;
     object-position: bottom;
     animation: fadeIn 2s ease-in-out;
@@ -80,10 +83,13 @@ p {
     justify-content: center;
     align-items: center;
     flex-direction: row;
+    flex-wrap: wrap;
 }
 
 .main-icons a img {
-    display: inline;
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
     max-width: 4rem;
     height: 4rem;
     object-fit: cover;
