@@ -1,68 +1,82 @@
-.blog-recent {
-    display: grid;
-    grid-template: repeat(2, 1fr 1fr);
-    place-content: center;
-}
 
-.blog-post {
-    display: flex;
-    max-width: 80vw;
-    max-height: fit-content;
-    flex-direction: row;
-    padding: 2rem;
-    border-radius: 2rem;
-    margin: 2rem;
-    box-shadow: 0 .5rem 1rem var(--text-color);
-}
 
-.blog-post:nth-child(even) {
-    flex-direction: row-reverse;
-    color: var(--text-color);
+/*coloring boxes*/
+
+.rightcolumn {
+    float:left;
+    width: 20%;
+    margin: 0rem 1rem;
 }
-.blog-post img {
-    max-width: 15rem;
-    object-fit: cover;
-    border-radius: 1rem;
-    margin:3rem 0;
-}
-.blog-content h3, .blog-content em{
-    text-align: center;
-}
-.blog-content {
-    position: relative;
+.blog-container {
     display: flex;
+    float:left;
+    width:70%;
     flex-direction: column;
-    padding: 2rem 1rem;
-    row-gap: 1rem;
+    margin:0rem 1rem
 }
-.blog-content p {
-    text-align: left;
-    text-indent: 1rem;
-    margin: .5rem 0;
+
+.card img{
+    width: 30%;
+    object-fit: cover;
+    padding:1rem;
 }
-.blog-content a{
-    color: var(--site-color2);
-    font-weight: bold;
+.card:nth-child(odd){
+    flex-direction: row-reverse;
+}
+.row::after{
+    content:"";
+    display:table;
+    clear:both;
+} 
+.card-content a{
     text-decoration: none;
+    color: var(--text-color);
+    transition: all 0.3s ease-in-out;
 }
+.post {
+    background-color: var(--background1);
+    margin:1rem;
+    padding:1rem;
+    border-radius: 1rem;
+}
+.post a:hover{
+    text-shadow: 0 .1rem .7rem var(--text-color);
+}
+.about-me {
+    display:flex;
+    flex-direction: column;
+    padding:1rem;
+}
+.post a{
+    text-decoration: none;
+    color: var(--text-color);
+    transition: all 0.3s ease-in-out;
+}
+
 @media only screen and (max-width: 768px) {
-    .blog-post {
-        display:grid;
-        grid-template-columns: auto;
-        place-items: center;
-        padding: 1rem;
+    .row{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .blog-container, .rightcolumn {
+        width: 100%;
+        padding: 0;
+        margin:0;
+    }
+    .rightcolumn{
+        display: none;
+    }
+    .card{
+        padding:.25rem;
         margin: 1rem;
     }
-    .blog-post img {
-        width: 15rem;
-        height: fit-content;
-        margin: 1rem 0;
-        box-shadow: 0 .5rem 1rem var(--text-color);
+    .about-me{
+        display:none;
+        flex-direction: row;
     }
-    .blog-content {
-        padding: 1rem;
-        display: flex;
-        flex-direction: column;
+    .about-me img{
+        width: 30%;
+        object-fit: cover;
+        border-radius: 1rem;
     }
-    
 }

@@ -1,4 +1,4 @@
-/* Default styles */
+/* color styles */
 
 .card-container {
   display: flex;
@@ -13,19 +13,9 @@
   height: 28rem;
   display: flex;
   flex-direction: column;  
-  cursor: pointer;
   overflow: hidden;
-  background-color: var(--background-color);
-  color:var(--text-color);
   transition: 1s ease;
-  border-radius: 1rem;
   box-shadow: 0 0 2rem rgba(0, 0, 0, 1.0);
-}
-.card:nth-child(odd) {
-  box-shadow: .25rem .25rem 2rem light-dark(black, white);
-}
-.card:nth-child(even) {
-  box-shadow: .25rem .25rem 2rem light-dark(blue,lightgray);
 }
 .card-img {
   height:40%;
@@ -37,19 +27,10 @@
   overflow: hidden;
   object-fit: cover;
 }
-.card-content p {
-  margin-top: 1rem;
-  overflow: hidden;
-  text-indent: 1vw;
-}
 
 .card-content {
-  border-top: var(--text-color) solid 1px;
   height: 21rem;
-  display: flex;
-  padding: 1rem;
   bottom: 0;
-  flex-direction: column;
   overflow: hidden;
 }
 

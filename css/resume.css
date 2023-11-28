@@ -8,6 +8,11 @@ hr{
     border: 2px solid var(--text-color);
     margin: 0;
 }
+#thin-hr{
+    width: 100%;
+    border: 1px solid var(--text-color);
+    margin: 0;
+}
 section{
     padding:1rem 2rem;
 }
@@ -73,15 +78,12 @@ section{
 .certification-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(12rem,1fr));
-    z-index: 0;
+    gap: 1rem;
 }
 .certification-box {
-    z-index: 0;
-    margin:1rem 1rem;
-    width:12rem;
-    height:10rem;
+    margin:1rem;
+    padding:1rem;
     display:flex;
-    float: left;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
@@ -98,7 +100,11 @@ section{
     display:block;
     background-color: var(--site-color1);
     margin:.5rem;
-    padding: .25rem .5rem;
+    padding:.5rem 1rem;
+}
+.google {
+    background: center/cover rgba(0,0,0,.5) url(https://s3.amazonaws.com/coursera_assets/meta_images/generated/CERTIFICATE_LANDING_PAGE/CERTIFICATE_LANDING_PAGE~S5SF2JJDQ6JX/CERTIFICATE_LANDING_PAGE~S5SF2JJDQ6JX.jpeg);
+    background-blend-mode: darken;
 }
 .cfi {
     background:center/cover rgba(0,0,0,.5) url(../Images/CFi-logo.jpeg);

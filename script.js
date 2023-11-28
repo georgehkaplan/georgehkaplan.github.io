@@ -9,6 +9,14 @@ icon.onclick = function() {
   }
 }
 
+if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+  document.body.classList.add("dark-theme");
+  icon.src = "Images/sun-icon.png";
+}
+if (window.matchMedia("(prefers-color-scheme: light)").matches) {
+  document.body.classList.remove("dark-theme");
+  icon.src = "Images/moon-icon.png";
+}
 
 
 function gfgMenu() { 

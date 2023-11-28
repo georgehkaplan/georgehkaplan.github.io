@@ -11,7 +11,7 @@
 }
 
 .dark-theme {
-    --background-color: #212121;
+    --background-color: #333;
     --background1:#37474f;
     --background2:#676767;
     --site-color1: #00B897;
@@ -42,6 +42,7 @@ ul {
     list-style: none;
 }
 h1 {
+    padding:2rem;
     font-size: 3rem;
     text-align: center;
     text-transform: uppercase;
@@ -54,7 +55,7 @@ h2 {
 }
 
 h3 {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     font-weight: bold;
 }
 hr {
@@ -93,18 +94,18 @@ header {
     object-fit: cover;
 }
 
-.header-nav ul {
+nav ul {
     display: inline;
     list-style: none;
 }
 
-.header-nav ul li {
+nav ul li {
     float:left;
     justify-content: center;
     max-height:8vh;
 }
 
-.header-nav ul li a {
+nav ul li a {
     display: block;
     padding: 0 1rem;
     line-height: 8vh;
@@ -114,9 +115,12 @@ header {
     border-radius: 1rem;
 }
 
-.header-nav ul li a:hover {
-    color:var(--background2);
-    text-shadow: 0 .1rem .5rem black;
+nav ul li a:hover {
+    background: -webkit-linear-gradient(var(--site-color1), var(--site-color3));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 1px 1rem 1rem var(--text-color);
 }
 
 
@@ -147,7 +151,6 @@ header {
 /*Skill Bars*/
 .about-skill-bar {
     height: 0.75rem;
-    margin-bottom:.5rem;
     border: 0.05rem solid var(--text-color);
 }
 
@@ -247,18 +250,57 @@ footer {
 .fromBottom{
     transform: translateY(20%);
 }
-
-.hidden {
-    opacity: 0;
-    filter:blur(10%);
+.hidden{
+    opacity: 10%;
+    filter:blur(5px);
     transition: all 1s ease;
 }
 .show {
     opacity: 1;
     filter:blur(0px);
-    transform: translateX(0%);
-    transition: all 2s ease;
+    transform: translateX(0);
+    transition: all 1s ease;
 }
+.hidden:nth-child(2), .show:nth-child(2){
+    transition-duration: +.5s;
+}
+.hidden:nth-child(3){
+    transition-duration: +1s;
+}
+.hidden:nth-child(4){
+    transition-duration: +1.5s;
+}
+
+
+/*Cards*/
+.card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding:1rem;
+    margin: 1rem .5rem;
+}
+.card, .about-me, .post{
+    margin:1rem;
+    padding:1rem;
+    border-radius: 1rem;
+    border: 3px solid transparent;
+    background: linear-gradient(var(--background-color), var(--background-color)) padding-box, linear-gradient(to right, var(--site-color1), var(--site-color3)) border-box;
+    border-radius: 1rem;
+}
+.card:nth-child(odd){
+    background: linear-gradient(var(--background-color), var(--background-color)) padding-box, linear-gradient(to left, var(--site-color1), var(--site-color3)) border-box;
+}
+.card-content {
+    padding:.5rem;
+    display:flex;
+    flex-direction: column;
+}
+.card-content p {
+    margin-top: 1rem;
+    overflow: hidden;
+    text-indent: 1vw;
+  }
 @media only screen and (max-width: 768px) {
     body{
         font-size: 14px;

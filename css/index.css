@@ -1,3 +1,12 @@
+
+text{
+    background: -webkit-linear-gradient(var(--site-color1), var(--site-color3));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-style: italic;
+}
+
 .main-title {
     max-height: 80vh;
     display: flex;
@@ -51,6 +60,12 @@
         opacity: 1;
     }
 }
+p{
+    margin:.5rem;
+}
+.card{
+    padding:0;
+}
 .main-icons {
     display: flex;
     justify-content: center;
@@ -65,7 +80,7 @@
     object-fit: cover;
     margin: .5rem;
     background-color: transparent;
-    filter: grayscale(100%) saturate(0%);
+    filter: grayscale(100%);
 }
 .main-icons a img:hover {
     filter: grayscale(0%) saturate(100%);
