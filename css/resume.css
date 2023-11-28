@@ -129,25 +129,30 @@ section{
 
 @media only screen and (max-width: 768px){
     .content-wrapper{
-        padding:1rem 2rem;
+        padding:0 1rem;
     }
     .left-wrapper{
         display:flex;
         flex-flow: column wrap;
         justify-content: center;
         align-items: center;
-        width:100%;
         float:none;
     }
     .certification-container{
         display: grid;
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(2, 1fr);
         place-items: center;
 
     }
+    .right-wrapper{
+        padding:0;
+        margin:0;
+    }
+    .resume-certifications{
+        width: 100%;
+    }
     .certification-box{
-        width:8rem;
-        height:10rem;
+        color: var(--text-color)
     }
 }
     

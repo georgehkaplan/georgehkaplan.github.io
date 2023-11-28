@@ -304,6 +304,10 @@ footer {
 @media only screen and (max-width: 768px) {
     body{
         font-size: 14px;
+        width:100%;
+        margin:0;
+        padding:0;
+        overflow: none;
     }
     h1{font-size:2rem;}
     h2{font-size:1.5rem;}
@@ -319,7 +323,6 @@ footer {
         display: block; 
 
     } 
-      
     .links { 
         display: none; 
     } 
@@ -374,7 +377,6 @@ footer {
     
     footer{
         padding:1rem;
-        width:100vw;
     }
     .footer-main-content{
         display: grid;
@@ -386,12 +388,15 @@ footer {
     }
     .footer-sitemap ul, .footer-contact{
         display:flex;
-        justify-content: center;
+        justify-content: space-evenly;
         text-align: center;
         flex-direction: row;
+        flex-wrap: wrap;
+        width: fit-content;
     }
+
     .footer-sitemap ul li{
-        margin:.5rem;
+        padding:1rem;
     }
     .footer-contact{
         display: none;
