@@ -29,11 +29,13 @@ p{
     display: flex;
     flex-direction: column;
     text-align: left;
+    flex-wrap: wrap;
 }
 .main-contact ul li{
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     width: 100%;
     padding: .25rem;
+    word-wrap: break-word;
 }
 .main-contact ul li img{
     max-width: 2rem;
@@ -53,6 +55,7 @@ p{
     float:left;
     width:20%;
     display: flex;
+    margin: 0;
     flex-direction: column;
 }
 .rightColumn {
