@@ -1,37 +1,24 @@
-
+strong{
+    font-weight: bold;
+}
 span {
     font-style: italic;
 }
-
-hr{
-    width: 100%;
-    border: 2px solid var(--text-color);
-    margin: 0;
-}
-#thin-hr{
-    width: 100%;
-    border: 1px solid var(--text-color);
-    margin: 0;
-}
-section{
-    padding:1rem 2rem;
-}
-.content-wrapper{
-    display:grid;
-    grid-template-columns: 25% 75%;;
+h3 {
+    text-transform: uppercase;
 }
 .left-wrapper {
-    display: grid;
-    grid-template-columns: 1fr;
-    place-items: center;
-    flex-direction: column;
-    align-self: start;
+    width:15rem;
+    display: flex;
     justify-content: center;
+    align-items: center;
+    float: left;
+    flex-wrap: wrap;
     line-height:1.5;
-    padding:0;
 }
-.resume-img img {
-    width: 100%;
+.resume-contact img {
+    margin: .5rem;
+    width:15rem;
 }
 .resume-contact ul li img {
     width:2rem;
@@ -43,9 +30,7 @@ section{
     display: block;
     background-color: var(--site-color1);
 }
-.resume-skills{
-    margin-top:1rem;
-}
+
 
 .right-wrapper {
     display: flex;
@@ -72,25 +57,27 @@ section{
 .resume-certifications {
     text-align: center;
     margin: 1rem 0;
-    color:var(--text-color)
 }
-
+.resume-certifications h4{
+    font-size:1.15rem;
+    margin: 1rem 0;;
+}
 .certification-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(12rem,1fr));
-    gap: 1rem;
+    display:flex;
+    justify-content: center;
+    align-items: center;
 }
 .certification-box {
-    margin:1rem;
+    width:13rem;
+    height:13rem;
+    background-color: black;
+    margin:.5rem;
     padding:1rem;
     display:flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
     line-height:1.5;
-    border-radius: 1rem;
-    color:var(--background-color);
-    box-shadow: 0 0 1rem var(--text-color);
 }
 .certification-box p {
     font-style: italic;
@@ -100,59 +87,36 @@ section{
     display:block;
     background-color: var(--site-color1);
     margin:.5rem;
-    padding:.5rem 1rem;
-}
-.google {
-    background: center/cover rgba(0,0,0,.5) url(https://s3.amazonaws.com/coursera_assets/meta_images/generated/CERTIFICATE_LANDING_PAGE/CERTIFICATE_LANDING_PAGE~S5SF2JJDQ6JX/CERTIFICATE_LANDING_PAGE~S5SF2JJDQ6JX.jpeg);
-    background-blend-mode: darken;
+    padding: .25rem .5rem;
 }
 .cfi {
-    background:center/cover rgba(0,0,0,.5) url(../Images/CFi-logo.jpeg);
+    background:rgba(0,0,0, 0.6) url(../Images/CFi-logo.jpeg);
+    background-position: center;
+    background-size: cover;
     background-blend-mode: darken;
 }
 .forage {
-    background: center/cover   rgba(0,0,0,.5)url(../Images/forage-logo.webp);
+    background: rgba(0,0,0,0.6) url(../Images/forage-logo.webp);
+    background-position:center;
+    background-size: cover;
+    background-repeat: no-repeat;
     background-blend-mode: darken;
 }
-.intuit{
-    background: center/cover  rgba(0,0,0,.5) url(../Images/intuit-logo.jpeg);
+.other:nth-child(1){
+    background: rgba(0,0,0, 0.6) url(../Images/intuit-logo.jpeg);
+    background-position: center;
+    background-size: cover;
     background-blend-mode: darken;
 }
-.linkedin{
-    background: center/cover  rgba(0,0,0,.5)  url(../Images/linkedin-logo.png);
+.other:nth-child(2){
+    background: rgba(0,0,0, 0.6) url(../Images/linkedin-logo.png);
+    background-position: center;
+    background-size: cover;
     background-blend-mode: darken;
 }
-.bloomberg{
-    background: center/cover  rgba(0,0,0,.5) url(../Images/bloomberg-logo.jpeg);
+.other:nth-child(3){
+    background: rgba(0,0,0, 0.6) url(../Images/bloomberg-logo.jpeg);
+    background-position: center;
+    background-size: cover;
     background-blend-mode: darken;
 }
-
-@media only screen and (max-width: 768px){
-    .content-wrapper{
-        padding:0 1rem;
-    }
-    .left-wrapper{
-        display:flex;
-        flex-flow: column wrap;
-        justify-content: center;
-        align-items: center;
-        float:none;
-    }
-    .certification-container{
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        place-items: center;
-
-    }
-    .right-wrapper{
-        padding:0;
-        margin:0;
-    }
-    .resume-certifications{
-        width: 100%;
-    }
-    .certification-box{
-        color: var(--text-color)
-    }
-}
-    

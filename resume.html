@@ -5,18 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resume</title>
     <link rel='stylesheet' href="css/main.css">
-    <link rel="stylesheet" href="css/resume.css">
-    <link rel="stylesheet" href= "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
-    <script defer src="script.js"></script>
+    <link rel='stylesheet' href="css/resume.css">
 </head>
 <body>
-    <!--Header-->
-    <header>
-        <div class="header-logo">
-            <a href="index.html" id="logo"><img src="Images/logo1.png" alt="logo" id="logo-img"></a>
-        </div>
-        <div class="header-nav">
-            <nav>
+    <header class="header-main">
+        <div class="header-main-logo">
+            <img src="Images/logo.png" alt="George Kaplan Logo">
+            <nav class="header-main-nav">
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About</a></li>
@@ -24,55 +19,37 @@
                     <li><a href="projects.html">Projects</a></li>
                     <li><a href="resume.html">Resume</a></li>
                 </ul>            
-            </nav>       
+            </nav> 
         </div>
-        <img src="Images/moon-icon.png" alt="moon icon" id="icon">
+        <div class="header-icons">
+            <a class="social-icon" href="https://app.joinhandshake.com/stu/users/27807369" target="_blank"></a>
+            <a class="social-icon" href="https://www.linkedin.com/in/georgehkaplan/" target="_blank"></a>
+        </div>
     </header>
-    <!--Mobile Header-->
-    <div class="navbar"> 
-        <div class="heading"> 
-            <a href="#hamburger-icon" onclick="gfgMenu()"> 
-                <i class="fa fa-bars"></i> 
-            </a> 
-        </div> 
-        <div class="links"> 
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="blog.html">Blog</a>
-            <a href="projects.html">Projects</a>
-            <a href="resume.html">Resume</a>
-        </div> 
-    </div> 
+    <h1 class="main-title">Resume</h1>
     <main class="main-content">
-        <h1>Resume</h1>
         <div class="content-wrapper">
             <!--Contact Information-->
-            <section class="left-wrapper">
-                <h3>GEORGE KAPLAN</h3>
-                <div class="resume-img">
-                    <img src="Images/pro-portrait.png" alt="George Kaplan Resume Photo">             
+            <div class="left-wrapper">
+                <div class="resume-contact">
+                    <h2>George Kaplan</h2>
+                    <img src="Images/pro-portrait.png" alt="George Kaplan Resume Photo">
+                    <ul>
+                        <li><img src="Images/Email-icon.png" alt="Email-icon"><a href="mailto:gkaplan1509@sdsu.edu">gkaplan1509@sdsu.edu</a></li>
+                        <li><img src="Images/Phone-icon.png" alt="Phone-icon"><a href="2068907606">206-890-7606</a></li>
+                        <li><img src="Images/linkedin-icon.png" alt="linkedin-icon"><a href="https://www.linkedin.com/in/georgehkaplan/">linkedin/georgehkaplan</a></li>
+                    </ul>                
                 </div>
                 <div class="resume-download">
                     <a href="Images/George-Kaplan-Resume.pdf" download>Download</a>                
                 </div>
-                <div class="resume-skills">
-                    <h3>SKILLS & OTHER</h3>
-                    <hr id="thin-hr">
-                    <p><strong>Techniques: </strong><br>
-                        Financial Analysis & Modeling, Data Analysis & Visualization, Dashboards, Data Integration, Trend Analysis, VBA Macros, Business Valuation, P&L Forecasting, Project Management, Process Improvement, Flowcharts</p><br>
-                    <p><strong>Tools & Technologies: </strong><br>
-                        Alteryx, SQL Oracle, Office 365, Tableau, PowerBI, Python, Visio, HTML & CSS, Swift</p><br>
-                    <p><strong>Interests: </strong><br>
-                        Financial Literacy, Hiking, Travel, Professional Development, “Rich Dad, Poor Dad” by Robert Kiyosaki   </p>
-                </div>
-                
-            </section>
+            </div>
             <!--Main Resume Information-->
             <div class="right-wrapper">
                 <section class="resume-education">
-                    <h3>EDUCATION</h3>
-                    <hr id="thin-hr">
-                    <div class="resume-position hidden fromBottom">
+                    <h3>Education</h3>
+                    <hr>
+                    <div class="resume-position">
                         <div class="resume-position-info">
                             <p><strong>San Diego State University | </strong>Fowler College of Business; San Diego, CA</p>
                             <span>Aug 2020 - Dec 2023</span>
@@ -85,9 +62,9 @@
                     </div>
                 </section>
                 <section class="resume-experience">
-                    <h3>WORK EXPERIENCE</h3>
-                    <hr id="thin-hr">
-                    <div class="resume-position hidden fromBottom">
+                    <h3>Work Experience</h3>
+                    <hr>
+                    <div class="resume-position">
                         <div class="resume-position-info">
                             <p><strong>J.P. Morgan Chase & Co. |</strong> Summer Analyst; Columbus, OH</p>
                             <span>Jun 2023 - Aug 2023</span>
@@ -100,7 +77,7 @@
                             <li>Integrated First Republic Bank cost centers via SQL and Excel, aligning IDs for accurate cross-bank comparisons.</li>
                         </ul>
                     </div>
-                    <div class="resume-position hidden fromBottom">
+                    <div class="resume-position">
                         <div class="resume-position-info">
                             <p><strong>Duffy Kruspodin |</strong> Tax Accounting Intern; La Jolla, CA</p>
                             <span>Jan 2023 - Apr 2023</span>
@@ -111,7 +88,7 @@
                         </ul>
                     </div>
 
-                    <div class="resume-position hidden fromBottom">
+                    <div class="resume-position">
                         <div class="resume-position-info">
                             <p><strong>Mitchell International | </strong> Finance Operations Intern; Virtual </p>
                             <span>May 2022 - Aug 2022</span>
@@ -122,7 +99,7 @@
                             <li>Coordinated bi-weekly progress reports on the structure of 400+ documents through Excel conditional formatting.</li>
                         </ul>
                     </div>
-                    <div class="resume-position hidden fromBottom">
+                    <div class="resume-position">
                         <div class="resume-position-info">
                             <p><strong>Best & Companies CPAs |</strong> Tax Account Internship; San Diego, CA</p>
                             <span>Jan 2022 - May 2022</span>
@@ -133,7 +110,7 @@
                             <li>Calculated owed balance for 140 clients and 5 business entities, including fiduciaries and imputed charges in Excel.</li>
                         </ul>
                     </div>
-                    <div class="resume-position hidden fromBottom">
+                    <div class="resume-position">
                         <div class="resume-position-info">
                             <p><strong>Associated Students | </strong>Financial Affairs Board Member; San Diego, CA</p>
                             <span>Aug 2020 - May 2021</span>
@@ -146,9 +123,9 @@
                     </div>
                 </section>
                 <section class="resume-leadership">
-                    <h3>LEADERSHIP</h3>
-                    <hr id="thin-hr">
-                    <div class="resume-position hidden fromBottom">
+                    <h3>Leadership</h3>
+                    <hr>
+                    <div class="resume-position">
                         <div class="resume-position-info">
                             <p><strong>Alpha Kappa Psi, Mu Sigma | </strong>Vice President of Finance; San Diego, CA</p>
                             <span>Dec 2022 - Present</span>
@@ -160,10 +137,10 @@
                         </ul>
                     </div>
 
-                    <div class="resume-position hidden fromBottom">
+                    <div class="resume-position">
                         <div class="resume-position-info">
                             <p><strong>TEDxSDSU | </strong>Chief Financial Officer; San Diego, CA</p>
-                            <span>Jul 2022 - Present</span>
+                            <span>ul 2022 - Present</span>
                         </div>
                         <ul>
                             <li>Increased funds by 18% by designing presentation, highlighting 10-yr history and distributing to 100+ sponsors.</li>
@@ -172,94 +149,104 @@
                     </div>
                 </section>
                 <section class="resume-certifications">
-                    <h3>CERTIFICATIONS</h3>
-                    <hr id="thin-hr">
-                    <div class="certification-view">
-                        <div class="certification-container">
-                            <div class="certification-box google hidden fromBottom">
-                                <h4>Google Data Analytics</h4>
-                                <p>Nov 17th, 2023</p>
-                                <a href="https://coursera.org/share/c7c12f851a5b0d50ebd158fe3c11a853" target="_blank">View</a>
-                            </div>
-                            <div class="certification-box cfi hidden fromBottom">
-                                <h4>Budgeting & Forecasting</h4>
-                                <p>Sep 17th, 2023</p>
-                                <a href="https://www.credential.net/82222262" target="_blank">View</a>
-                            </div>
-                            <div class="certification-box cfi hidden fromBottom">
-                                <h4>FP&A Monthly Cash Flow Forecast Model</h4>
-                                <p>Sep 17th, 2023</p>
-                                <a href="https://www.credential.net/82206757" target="_blank">View</a>
-                            </div>
-                            <div class="certification-box cfi hidden fromBottom">
-                                <h4>Reading Financial Statements</h4>
-                                <p>Sep 17th, 2023</p>
-                                <a href="https://www.credential.net/82221434" target="_blank">View</a>
-                            </div>
-                            <div class="certification-box cfi hidden fromBottom">
-                                <h4>Excel Fundamentals - Finance</h4>
-                                <p>May 13th, 2023</p>
-                                <a href="https://www.credential.net/73554311" target="_blank">View</a>
-                            </div>
-                            <div class="certification-box forage hidden fromBottom">
-                                <h4>J.P. Morgan Investment Banking</h4>
-                                <p>Oct 2022</p>
-                                <a href="https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/JPMorgan%20Chase/YD2kY95RQxQtXxFTS_JPMorgan%20Chase_zaswDBTrEn2aukNWi_1683569560941_completion_certificate.pdf" target="_blank">View</a>
-                            </div>
-                            <div class="certification-box forage hidden fromBottom">
-                                <h4>J.P. Morgan Corporate Analyst Development Program</h4>
-                                <p>Oct 2022</p>
-                                <a href="https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/JPMorgan%20Chase%20Corporate/4dy5SP43KMPppKz2i_JPMorgan%20Chase%20&%20Co._zaswDBTrEn2aukNWi_1683569549619_completion_certificate.pdf" target="_blank">View</a>
-                            </div>
-                            <div class="certification-box forage hidden fromBottom">
-                                <h4>Goldman Sachs, Excel Skills for Business</h4>
-                                <p>Oct 2022</p>
-                                <a href="https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/Goldman%20Sachs/eLeZHcwX7CqLhhps7_Goldman%20Sachs_zaswDBTrEn2aukNWi_1683569564522_completion_certificate.pdf" target="_blank">View</a>
-                            </div>
-                            <div class="certification-box forage hidden fromBottom">
-                                <h4>Goldman Sachs, Software Engineering</h4>
-                                <p>Oct 2022</p>
-                                <a href="https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/Goldman%20Sachs/NPdeQ43o8P9HJmJzg_Goldman%20Sachs_zaswDBTrEn2aukNWi_1683569553833_completion_certificate.pdf" target="_blank">View</a>
-                            </div>
-                            <div class="certification-box intuit hidden fromBottom">
-                                <h4>Tax Level 1 Exam: Federal Individual Tax Returns</h4>
-                                <p>Nov 2022</p>
-                                <a href="https://www.credly.com/badges/cdc67dd3-9092-4c03-9d01-4c144a659a9b/public_url" target="_blank">View</a>
-                            </div>
-                            <div class="certification-box linkedin hidden fromBottom">
-                                <h4>Excel Associate - Microsoft Office Specialist for Office 2019 and Office 365</h4>
-                                <p>Oct 2022</p>
-                                <a href="https://www.linkedin.com/learning/certificates/4c103e4dae1b25d4987f0be37073e2b83e73348d653c3b65433b2e448142f113?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_certifications_details%3BkM4NqC6yQCOs5UVp2R%2Fnhg%3D%3D" target="_blank">View</a>
-                            </div>
-                            <div class="certification-box hidden fromBottom bloomberg">
-                                <h4>Bloomberg Market Concepts</h4>
-                                <p>May 2022</p>
-                                <a href="https://portal.bloombergforeducation.com/certificates/Y2uksthRqqB5LA1zShNVWqqm" target="_blank">View</a>
-                            </div>
+                    <h3>Certifications</h3>
+                    <hr>
+                    <h4>Corporate Finance Institute</h4>
+                    <div class="certification-container">
+                        <div class="certification-box cfi">
+                            <h5>Budgeting & Forecasting</h5>
+                            <p>Sep 17th, 2023</p>
+                            <a href="https://www.credential.net/82222262" target="_blank">View</a>
+                        </div>
+                        <div class="certification-box cfi">
+                            <h5>FP&A Monthly Cash Flow Forecast Model</h5>
+                            <p>Sep 17th, 2023</p>
+                            <a href="https://www.credential.net/82206757" target="_blank">View</a>
+                        </div>
+                        <div class="certification-box cfi">
+                            <h5>Reading Financial Statements</h5>
+                            <p>Sep 17th, 2023</p>
+                            <a href="https://www.credential.net/82221434" target="_blank">View</a>
+                        </div>
+                        <div class="certification-box cfi">
+                            <h5>Excel Fundamentals - Finance</h5>
+                            <p>May 13th, 2023</p>
+                            <a href="https://www.credential.net/73554311" target="_blank">View</a>
                         </div>
                     </div>
+                    <h4>Forage</h4>
+                    <div class="certification-container">
+                        <div class="certification-box forage">
+                            <h5>J.P. Morgan Investment Banking</h5>
+                            <p>Oct 2022</p>
+                            <a href="https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/JPMorgan%20Chase/YD2kY95RQxQtXxFTS_JPMorgan%20Chase_zaswDBTrEn2aukNWi_1683569560941_completion_certificate.pdf" target="_blank">View</a>
+                        </div>
+                        <div class="certification-box forage">
+                            <h5>J.P. Morgan Corporate Analyst Development Program</h5>
+                            <p>Oct 2022</p>
+                            <a href="https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/JPMorgan%20Chase%20Corporate/4dy5SP43KMPppKz2i_JPMorgan%20Chase%20&%20Co._zaswDBTrEn2aukNWi_1683569549619_completion_certificate.pdf" target="_blank">View</a>
+                        </div>
+                        <div class="certification-box forage">
+                            <h5>Goldman Sachs, Excel Skills for Business</h5>
+                            <p>Oct 2022</p>
+                            <a href="https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/Goldman%20Sachs/eLeZHcwX7CqLhhps7_Goldman%20Sachs_zaswDBTrEn2aukNWi_1683569564522_completion_certificate.pdf" target="_blank">View</a>
+                        </div>
+                        <div class="certification-box forage">
+                            <h5>Goldman Sachs, Software Engineering</h5>
+                            <p>Oct 2022</p>
+                            <a href="https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/Goldman%20Sachs/NPdeQ43o8P9HJmJzg_Goldman%20Sachs_zaswDBTrEn2aukNWi_1683569553833_completion_certificate.pdf" target="_blank">View</a>
+                        </div>
+                    </div>
+                    <h4>Other</h4>
+                    <div class="certification-container">
+                        <div class="certification-box other">
+                            <h5>Tax Level 1 Exam: Federal Individual Tax Returns</h5>
+                            <p>Nov 2022</p>
+                            <a href="https://www.credly.com/badges/cdc67dd3-9092-4c03-9d01-4c144a659a9b/public_url" target="_blank">View</a>
+                        </div>
+                        <div class="certification-box other">
+                            <h5>Excel Associate - Microsoft Office Specialist for Office 2019 and Office 365</h5>
+                            <p>Oct 2022</p>
+                            <a href="https://www.linkedin.com/learning/certificates/4c103e4dae1b25d4987f0be37073e2b83e73348d653c3b65433b2e448142f113?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_certifications_details%3BkM4NqC6yQCOs5UVp2R%2Fnhg%3D%3D" target="_blank">View</a>
+                        </div>
+                        <div class="certification-box other">
+                            <h5>Bloomberg Market Concepts</h5>
+                            <p>May 2022</p>
+                            <a href="https://portal.bloombergforeducation.com/certificates/Y2uksthRqqB5LA1zShNVWqqm" target="_blank">View</a>
+                        </div>
+                    </div>
+                </section>
+                <section class="resume-other">
+                    <h2>Skills & Interests</h2>
+                    <hr>
+                    <p><strong>Techniques: </strong>Financial Analysis & Modeling, Data Analysis & Visualization, Dashboards, Data Integration, Trend Analysis, VBA Macros, Business Valuation, P&L Forecasting, Project Management, Process Improvement, Flowcharts</p>
+                    <p><strong>Tools & Technologies: </strong>Alteryx, SQL Oracle, Office 365, Tableau, PowerBI, Python, Visio, HTML & CSS, Swift</p>
+                    <p><strong>Interests: </strong>Financial Literacy, Hiking, Travel, Professional Development, “Rich Dad, Poor Dad” by Robert Kiyosaki   </p>
                 </section>
             </div>
         </div>    
     </main>
     <footer class="footer-main">
         <h2>Website Information</h2>
-        <hr id="footer-line">
         <div class="footer-main-content">
-            <div class="footer-text">
-                <p>&copy; georgehkaplan.com<br>
-                </p>
-            </div>            
             <div class="footer-sitemap">
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="blog.html">Blog</a></li>
-                    <li><a href="projects.html">Projects</a></li>
-                    <li><a href="resume.html">Resume</a></li>
-                </ul>      
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="resume.html">Resume</a></li>
+                    </ul>      
             </div>  
+            <div class="footer-text">
+                <p>This website is created for a project in MIS:481 - E-business and Web Development at San Diego State University. <br>
+                    It serves as a demonstration of skills and knowledge acquired during the course. The content, products, and services displayed <br>
+                    here are for educational purposes only and do not represent actual offerings. <br>
+                    <br>
+                    For any inquiries or further information, please contact George Kaplan at gkaplan1509@sdsu.edu"</p>
+            </div>
             <div class="footer-contact">
+                <p>Contact Info</p>
                 <ul>
                     <li>Tel: (206)-890-7606</li>
                     <li>gkaplan1509@sdsu.edu</li>
