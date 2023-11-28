@@ -10,6 +10,9 @@ p{
     text-indent: 1rem;
     margin-top: 1rem;
 }
+.main-content{
+    margin:0;
+}
 .card1 {
     display: flex;
     flex-direction: column;
@@ -20,6 +23,7 @@ p{
 }
 .main-info img {
     width: 100%;
+    padding:1rem;
 }
 .main-contact ul{
     display: flex;
@@ -47,7 +51,7 @@ p{
 }
 .leftColumn{
     float:left;
-    width:25%;
+    width:20%;
     display: flex;
     flex-direction: column;
 }
@@ -72,31 +76,96 @@ p{
 }
 
 @media only screen and (max-width: 760px) {
-    main{
-        display: grid;
-        grid-template-columns: 1fr;
-        place-items: center;
-        float:none;
-        width: 100%;
+    .leftColumn, .rightColumn, .card1, .card {
+        width:100%;
+        margin:0;
+        padding:1rem 0;
+        display:flex;
     }
-    .left-content {
-        float:none;
-        
+    .leftColumn img {
+        display:none;
+        padding:1rem;
+    }
+    .main-contact ul li img{
+        max-width: 1.5rem;
+        max-height: 1.5rem;
+    }
+    .main-contact ul li a{
+        font-size: .75rem;
+    }
+    .main-info img {
+        width: 100%;
+        padding:1rem;
+    }
+    .about-skills{
+        width:100%;
+        padding:1rem;
+    }
+    .main-contact ul{
+        display: flex;
+        flex-direction: column;
+        text-align: left;
     }
     .main-contact ul li{
         flex-wrap: nowrap;
-        
-        margin: 0;
-        padding: 0;
+        width: 100%;
+        padding: .25rem;
     }
     .main-contact ul li img{
-        color:black;
-        max-width: 1rem;
-        max-height: 1rem;
+        max-width: 2rem;
+        max-height: 2rem;
+        vertical-align: middle;
+        margin: .5rem;
+        left:0;
+        fill-opacity: var(--text-color);
     }
-    .right-content{
-        width: 100%;
-        border-left: none;
+    .main-contact ul li a{
+        color:var(--text-color);
+        text-decoration: none;
+        margin: .5rem;
+        left:0;
+    }
+    .about-intro {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .about-skills{
+        width:100%;
         padding:1rem;
     }
+    .main-content{
+        content:"";
+        display:table;
+        clear:both;
+    }
+    .about-intro {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .about-skills{
+        width:100%;
+        padding:1rem;
+    }
+    .main-content{
+        content:"";
+        display:table;
+        clear:both;
+    }
+    .about-intro {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .about-skills{
+        width:100%;
+        padding:1rem;
+    }
+    .main-content{
+        content:"";
+        display:table;
+        clear:both;
+    }
+
 }

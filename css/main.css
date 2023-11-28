@@ -317,6 +317,7 @@ footer {
     }
     .navbar { 
         display: block; 
+
     } 
       
     .links { 
@@ -330,7 +331,7 @@ footer {
     } 
       
     .heading a i { 
-        color: var(--background-color);
+        color: var(--text-color);
         padding: .95rem;
         display: block; 
         position: absolute; 
