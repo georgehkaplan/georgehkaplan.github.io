@@ -1,0 +1,83 @@
+
+
+/*coloring boxes*/
+
+.rightcolumn {
+    float:left;
+    width: 20%;
+    margin: 0rem 1rem;
+}
+.blog-container {
+    display: flex;
+    float:left;
+    width:70%;
+    flex-direction: column;
+    margin:0rem 1rem
+}
+
+.card img{
+    width: 30%;
+    object-fit: cover;
+    padding:1rem;
+}
+.card:nth-child(odd){
+    flex-direction: row-reverse;
+}
+.row::after{
+    content:"";
+    display:table;
+    clear:both;
+} 
+.card-content a{
+    text-decoration: none;
+    color: var(--text-color);
+    transition: all 0.3s ease-in-out;
+}
+.post {
+    row-gap: 1rem;
+    background-color: var(--background1);
+    margin:1rem;
+    padding:1rem;
+    border-radius: 1rem;
+}
+.post a:hover{
+    text-shadow: 0 .1rem .7rem var(--text-color);
+}
+.about-me {
+    display:flex;
+    flex-direction: column;
+    padding:1rem;
+}
+.post a{
+    text-decoration: none;
+    color: var(--text-color);
+    transition: all 0.3s ease-in-out;
+}
+
+@media only screen and (max-width: 768px) {
+    .row{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .blog-container, .rightcolumn {
+        width: 100%;
+        padding: 0;
+        margin:0;
+    }
+    .rightcolumn{
+        display: none;
+    }
+    .card{
+        padding:.25rem;
+        margin: 1rem;
+    }
+    .about-me{
+        display:none;
+        flex-direction: row;
+    }
+    .about-me img{
+        width: 30%;
+        object-fit: cover;
+        border-radius: 1rem;
+    }
+}

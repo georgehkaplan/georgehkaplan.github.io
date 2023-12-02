@@ -1,0 +1,26 @@
+
+.intro-page img{
+    width: 17rem;
+    height: auto;
+    object-fit: scale-down;
+    vertical-align: middle;
+    float: left;
+    margin: 0 2rem;
+}
+.intro-text {
+    text-align: justify;
+}
+p{
+    text-indent: 2rem;
+    margin-bottom:2rem
+}
+ol{
+    margin-left: 1rem;
+    margin-bottom:1rem;
+    list-style: square outside;
+}
+ul{
+    margin-left: 1rem;
+    margin-bottom:1rem;
+    list-style-type: disc outside;
+}
