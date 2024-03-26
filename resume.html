@@ -22,7 +22,7 @@
                     <li><a href="about.html">About</a></li>
                     <li><a href="blog.html">Blog</a></li>
                     <li><a href="projects.html">Projects</a></li>
-                    <li><a href="resume.html">Resume</a></li>
+                    <li><a href="resume.html"><page>Resume</page></a></li>
                 </ul>            
             </nav>       
         </div>
@@ -30,22 +30,34 @@
     </header>
     <!--Mobile Header-->
     <div class="mobile-container">
-        <nav class="mobile-nav">
-            <a href="about.html"><i class="fa-solid fa-circle-user"></i></a>
-            <a href="blog.html"><i class="fa-solid fa-book"></i></a>
-            <a href="index.html" ><i class="fa-solid fa-house"></i></a>
-            <a href="projects.html"><i class="fa-solid fa-laptop-code"></i></a>
-            <a href="resume.html" class="active"><i class="fa-solid fa-file"></i></a>
-        </nav>
+        <div class="hamburger-menu">
+            <input id="menu__toggle" type="checkbox" />
+            <label class="menu__btn" for="menu__toggle">
+              <span></span>
+            </label>
+        
+            <ul class="menu__box">
+              <li><a class="menu__item" href="index.html">Home</a></li>
+              <li><a class="menu__item" href="about.html">About</a></li>
+              <li><a class="menu__item" href="blog.html">Blog</a></li>
+              <li><a class="menu__item" href="projects.html">Projects</a></li>
+              <li><a class="menu__item" href="resume.html">Resume</a></li>
+            </ul>
+        </div>
     </div>
     <main class="main-content">
         <h1>Resume</h1>
-        <div class="content-wrapper">
+        <div class="content-wrapper card-border">
             <!--Contact Information-->
-            <section class="left-wrapper">
-                <h3>GEORGE KAPLAN</h3>
+            <div class="left-wrapper">
+                <h2>GEORGE KAPLAN</h2>
                 <div class="resume-img">
                     <img src="Images/pro-portrait.png" alt="George Kaplan Resume Photo">             
+                </div>
+                <div class="main-icons">
+                    <a href="https://www.linkedin.com/in/georgehkaplan/" target="_blank"><img src="Images/linkedin-icon.png" alt="linkedin icon"></a>
+                    <a href="https://app.joinhandshake.com/stu/users/27807369" target="_blank"><img src="Images/handshake-icon.png" alt="handshake icon"></a>
+                    <a href="https://github.com/georgehkaplan" target="_blank"><img src="Images/github-icon.png" alt="github icon"></a>
                 </div>
                 <div class="resume-download">
                     <a href="Images/George-Kaplan-Resume.pdf" class="green-button" >Download</a>                
@@ -58,10 +70,20 @@
                     <p><strong>Tools & Technologies: </strong><br>
                         Alteryx, SQL Oracle, Office 365, Tableau, PowerBI, Python, Visio, HTML & CSS, Swift</p><br>
                     <p><strong>Interests: </strong><br>
-                        Financial Literacy, Hiking, Travel, Professional Development, “Rich Dad, Poor Dad” by Robert Kiyosaki   </p>
+                        Financial Literacy, Hiking, Travel, Professional Development, “Rich Dad, Poor Dad” by Robert Kiyosaki <br></p>
                 </div>
-                
-            </section>
+                <div class="external-courses">
+                    <h3>External Courses</h3>
+                    <hr id="thin-hr">
+
+                    <div class="external-icons">
+                        <a href="https://www.coursera.org/user/deb33939e69522955ed4a2c82a2f94e8" target="_blank"><img src="Images/coursera-logo.png">Coursera</a>
+                        <a href="https://www.linkedin.com/in/georgehkaplan/" target="_blank"><img src="Images/LinkedIn_icon.png" alt="linkedin icon">Learning</a>
+                        <a href="https://www.theforage.com/profile/zaswDBTrEn2aukNWi" target="_blank"><img src="Images/forage-logo.webp" alt="">Forage</a>
+                    </div>
+
+                </div>
+            </div>
             <!--Main Resume Information-->
             <div class="right-wrapper">
                 <section class="resume-education">
@@ -74,7 +96,7 @@
                         </div>
                         <div class="resume-position-info">
                             <p>Bachelor of Science in Business Administration</p>
-                            <span>GPA:<strong>3.42</strong></span>                        
+                            <!--<span>GPA:<strong>3.42</strong></span>  -->                      
                         </div>
                         <p>Emphasis in Finance and Information Systems</p>
                     </div>

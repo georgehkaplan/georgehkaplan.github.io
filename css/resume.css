@@ -11,31 +11,36 @@ hr{
 #thin-hr{
     width: 100%;
     border: 1px solid var(--text-color);
-    margin: 0;
+    margin: 0.5rem 0;
 }
-section{
-    padding:1rem 2rem;
-}
+
 .content-wrapper{
     display:grid;
-    grid-template-columns: 25% 75%;;
+    grid-template-columns: 0.15fr 1fr;
+    place-content: center;
+    column-gap: 1rem;
 }
+
+
+
+/*LEFT COLUMNS */
 .left-wrapper {
     display: grid;
-    grid-template-columns: 1fr;
-    place-items: center;
-    flex-direction: column;
     align-self: start;
-    justify-content: center;
-    line-height:1.5;
-    padding:0;
+    place-items: center;
+    padding:0.5rem;
+    row-gap: 0.5rem;
+    margin: 1rem;
+}
+
+
+
+.resume-img {
+    width: 20vw;
 }
 .resume-img img {
     width: 100%;
-}
-.resume-contact ul li img {
-    width:2rem;
-    vertical-align: middle;
+    object-fit: scale-down;
 }
 .resume-download a {
     width:fit-content;
@@ -45,6 +50,48 @@ section{
 }
 .resume-skills{
     margin-top:1rem;
+}
+.external-courses {
+    width: 100%;
+    padding: 1rem 0;
+}
+.external-icons{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    height:10vh;
+    padding: 1rem 0;
+}
+.external-icons a{
+    display: grid;
+    text-decoration: none;
+    color:var(--text-color);
+    place-items: center;
+}
+.external-courses a img {
+    object-fit: cover;
+    border-radius: 30%;
+    max-height:6rem;
+    margin: .5rem;
+}
+
+.main-icons {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+}
+
+.main-icons a img {
+    justify-content: center;
+    flex-flow: row wrap;
+    max-height: 5rem;
+    object-fit: cover;
+    filter: grayscale(100%);
+    padding:.5rem;
+    margin:1rem;
+    background-color: var(--background1);
+    border-radius: 45%;
+}
+.main-icons a img:hover {
+    filter: grayscale(0%) saturate(100%);
 }
 
 .right-wrapper {
@@ -79,6 +126,7 @@ section{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(12rem,1fr));
     gap: 1rem;
+
 }
 .certification-box {
     margin:1rem;
@@ -91,16 +139,21 @@ section{
     border-radius: 1rem;
     color:var(--background-color);
     box-shadow: 0 0 1rem var(--text-color);
+
 }
 .certification-box p {
     font-style: italic;
     text-align: center;
+}
+.certification-box p, .certification-box h4 {
+    color: var(--background-color);
 }
 .certification-box a {
     display:block;
     background-color: var(--site-color1);
     margin:.5rem;
     padding:.5rem 1rem;
+    color: var(--text-color);
 }
 .google {
     background: center/cover rgba(0,0,0,.5) url(https://s3.amazonaws.com/coursera_assets/meta_images/generated/CERTIFICATE_LANDING_PAGE/CERTIFICATE_LANDING_PAGE~S5SF2JJDQ6JX/CERTIFICATE_LANDING_PAGE~S5SF2JJDQ6JX.jpeg);
@@ -130,6 +183,7 @@ section{
 @media only screen and (max-width: 768px){
     .content-wrapper{
         padding:0 1rem;
+
     }
     .left-wrapper{
         display:flex;

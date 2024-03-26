@@ -6,6 +6,7 @@
     <title>Home</title>
     <link rel='stylesheet' href="css/main.css">
     <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/transitions.css">
     <script defer src="script.js"></script>
     <script src="https://kit.fontawesome.com/c565d3ada5.js" crossorigin="anonymous"></script>
 </head>
@@ -18,7 +19,7 @@
         <div class="header-nav">
             <nav>
                 <ul>
-                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html"><page>Home</page></a></li>
                     <li><a href="about.html">About</a></li>
                     <li><a href="blog.html">Blog</a></li>
                     <li><a href="projects.html">Projects</a></li>
@@ -26,89 +27,88 @@
                 </ul>            
             </nav>       
         </div>
-        <img src="Images/moon-icon.png" alt="moon icon" id="icon">
+        <div class="display-mode">
+            <img src="Images/moon-icon.png" id="icon" alt="moon icon">
+            <label class="switch"id="icon">
+                <input type="checkbox" id="icon">
+                <span class="slider round"id="icon"></span>
+            </label>
+            <img src="Images/sun-icon.png" alt="sun icon" id="icon">
+        </div>
     </header>
+
     <!--Mobile Header-->
     <div class="mobile-container">
-        <nav class="mobile-nav">
-            <a href="about.html"><i class="fa-solid fa-circle-user"></i></a>
-            <a href="blog.html"><i class="fa-solid fa-book"></i></a>
-            <a href="index.html" class="active"><i class="fa-solid fa-house"></i></a>
-            <a href="projects.html"><i class="fa-solid fa-laptop-code"></i></a>
-            <a href="resume.html"><i class="fa-solid fa-file"></i></a>
-        </nav>
+        <div class="hamburger-menu">
+            <input id="menu__toggle" type="checkbox" />
+            <label class="menu__btn" for="menu__toggle">
+              <span></span>
+            </label>
+        
+            <ul class="menu__box">
+              <li><a class="menu__item" href="index.html">Home</a></li>
+              <li><a class="menu__item" href="about.html">About</a></li>
+              <li><a class="menu__item" href="blog.html">Blog</a></li>
+              <li><a class="menu__item" href="projects.html">Projects</a></li>
+              <li><a class="menu__item" href="resume.html">Resume</a></li>
+            </ul>
+        </div>
     </div>
     <!--Main Content-->
     <main>
 
         <div class="main-title">
+
             <div class="main-hero-intro">
-                <h1>Hi, I'm <br><text>George</text> Kaplan</h1>
-                <p>Undergraduate Finance and Information<br> Systems at San Diego State University</p>
+
+                <h1> Hi, I'm <name>George</name></h1>
+                <p>Story telling through data driven decision making<br>
+                Finance | Information Systems | Data Analytics </p>
+
                 <div class="main-icons">
                     <a href="https://www.linkedin.com/in/george-kaplan-1509/" target="_blank" class="card"><img src="Images/linkedin-icon.png" alt="linkedin icon"></a>
                     <a href="https://app.joinhandshake.com/stu/users/27807369" target="_blank" class="card"><img src="Images/handshake-icon.png" alt="handshake icon"></a>
                     <a href="https://github.com/georgehkaplan" target="_blank" class="card"><img src="Images/github-icon.png" alt="github icon"></a>
-                    <a href="https://www.instagram.com/georgehkaplan/" target="_blank" class="card"><img src="Images/instagram-icon.png" alt="instagram icon"></a>
                 </div>
+
                 <a href="projects.html" class="green-button">MY WORK</a>
             </div>
+
             <div class="main-hero-img">
+
                 <img src="Images/portrait.png" alt="hero image">
             </div>
+
         </div>
 
         <section class="index-about ">
-            <h2>A little about me...</h2>
-            <hr>
+            <h2 class="card">A little about me...</h2>
             <div class="about-container">
-                <div class="index-about-text hidden fromLeft">
-                    <p>Welcome!</p>
-                    <p>I'm a Finance major at SDSU, skilled in data-driven insights and financial modeling. Based in San Diego, I'm passionate about tech-driven finance.</p>
-                    <p>Beyond academics, I love outdoor activities and avid reading. My goal? To be a trusted finance expert driving meaningful insights for businesses and communities.<br></p>
+                <div class="hidden fromLeft">
+                    <h3 style="text-align: center;">Welcome!</h3>
+                    <p>I'm a recent graduate from San Diego State University with a degree in Finance and Information Systems, skilled in data-driven insights and financial modeling. Based in San Diego, I'm passionate about tech-driven finance.</p>
+                    <p>Beyond academics, I love outdoor activities and avid reading. My goal? To be a trusted finance expert driving meaningful insights for businesses and communities.</p>
                     <a href="about.html" class="green-button">Learn More!</a>
                 </div>
-                <div class="about-skills-container hidden fromRight">
-                    <p>Excel</p>
-                    <div class="about-skill-bar">
-                        <div class="about-skill-bar-fill excel"></div>
-                    </div>
-                    <p>Alteryx</p>
-                    <div class="about-skill-bar">
-                        <div class="about-skill-bar-fill alteryx"></div>
-                    </div>
-                    <p>SQL</p>
-                    <div class="about-skill-bar">
-                        <div class="about-skill-bar-fill sql"></div>
-                    </div>
-                    <p>Tableau</p>
-                    <div class="about-skill-bar">
-                        <div class="about-skill-bar-fill tableau"></div>
-                    </div>
-                    <p>Power BI</p>
-                    <div class="about-skill-bar">
-                        <div class="about-skill-bar-fill power-bi"></div>
-                    </div>
-                    <p>HTML & CSS</p>
-                    <div class="about-skill-bar">
-                        <div class="about-skill-bar-fill html-css"></div>
-                    </div>
+                <div class="hidden from right">
+                    <p>Hometown</p>
                 </div>
             </div>
         </section>
+
         <section class="past-companies hidden">
             <h2>Where I've been</h2>
             <div class="past-companies-img">
-                <img src="Images/jpmorgan-logo.webp" id="bg-blur" alt="J.P. Morgan Chase Logo" class="company hidden">
-                <img src="Images/dkp-logo.png" id="bg-blur"  alt="Duffy Kruspodin LLC Logo" class="company hidden">
-                <img src="Images/mitchell-logo.png" id="bg-blur"  alt="Mitchell International Logo" class="company hidden">
-                <img src="Images/betterbuzz-logo.webp" id="bg-blur"  alt="Better Buzz Coffee Logo" class="company hidden">
-                <img src="Images/akpsi-logo.png" id="bg-blur"  alt="Alpha Kappa Psi logo" class="company hidden">
-                <img src="Images/tedxsdsu-logo.png" id="bg-blur"  alt="TEDxSDSU Logo" class="company hidden">
-                </ul>
+                <img src="Images/jpmorgan-logo.webp" alt="J.P. Morgan Chase Logo" class="company hidden bg-blur">
+                <img src="Images/dkp-logo.png" alt="Duffy Kruspodin LLC Logo" class="company hidden bg-blur">
+                <img src="Images/mitchell-logo.png"  alt="Mitchell International Logo" class="company hidden bg-blur">
+                <img src="Images/betterbuzz-logo.webp"  alt="Better Buzz Coffee Logo" class="company hidden bg-blur">
+                <img src="Images/akpsi-logo.png"  alt="Alpha Kappa Psi logo" class="company hidden bg-blur">
+                <img src="Images/tedxsdsu-logo.png"   alt="TEDxSDSU Logo" class="company hidden bg-blur">
             </div>                
         </section>
     </main>
+
     <footer class="footer-main">
         <h2>Website Information</h2>
         <hr id="footer-line">

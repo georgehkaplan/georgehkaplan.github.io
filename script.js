@@ -28,6 +28,7 @@ const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll
     if(entry.isIntersecting){
       entry.target.classList.add('show');
     } else {
+      entry.target.classList.remove('show');
       return;
     }
   });

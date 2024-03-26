@@ -1,15 +1,16 @@
-/* color styles */
 
 .card-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  place-items: center;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  place-content: center;
+  align-items: center;
+  grid-auto-flow: row;
 }
 
 .card {
-  width: 23rem;
-  height: 35rem;
+  
+  max-height: 36rem;
+  margin: 3rem;
   display: flex;
   flex-direction: column; 
   overflow: hidden;
@@ -17,7 +18,7 @@
   box-shadow: 0 0 2rem rgba(0, 0, 0, 1.0);
 }
 .card-img {
-  height:40%;
+  max-height:12rem;
   overflow: hidden;
 }
 
@@ -32,7 +33,9 @@
   bottom: 0;
   overflow: hidden;
 }
-
+.resume-project:nth-child(2) {
+  display:none;
+}
 .card-content h3,
 .card-content i {
   text-align: center;
